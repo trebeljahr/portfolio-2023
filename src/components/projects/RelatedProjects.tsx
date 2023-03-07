@@ -40,8 +40,8 @@ function RelatedProjects() {
             <Image
               src={project.img}
               className='cursor-pointer rounded-xl'
-              width='400'
-              height='400'
+              width={200}
+              height={200}
               alt={project.title}
               key={project.id}
             />

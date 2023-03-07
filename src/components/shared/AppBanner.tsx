@@ -22,7 +22,7 @@ function AppBanner() {
             delay: 0.1,
           }}
           className='text-2xl text-center uppercase font-general-semibold lg:text-3xl xl:text-4xl sm:text-left text-ternary-dark dark:text-primary-light'>
-          Hi, Iam Stoman
+          Hi, I am Rico
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -33,7 +33,7 @@ function AppBanner() {
             delay: 0.2,
           }}
           className='mt-4 text-lg leading-normal text-center text-gray-500 font-general-medium md:text-xl lg:text-2xl xl:text-3xl sm:text-left dark:text-gray-200'>
-          A Full-Stack Developer & Design Enthusiast
+          A Full-Stack Engineer, with a passion for building and designing
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -59,7 +59,12 @@ function AppBanner() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
         className='float-right w-full mt-8 text-right sm:w-2/3 sm:mt-0'>
-        <Image src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'} alt='Developer' />
+        <Image
+          src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
+          width={200}
+          height={200}
+          alt='Developer'
+        />
       </motion.div>
     </motion.section>
   )

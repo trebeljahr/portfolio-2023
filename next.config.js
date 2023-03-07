@@ -8,16 +8,12 @@ const withPWA = require('next-pwa')({
 })
 
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/animals_pack',
-        permanent: true,
-      },
-    ]
-  },
   experimental: {},
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US',
+    domains: [{ domain: 'example.com', defaultLocale: 'en-US' }],
+  },
   images: {},
   reactStrictMode: true,
   webpack(config, { isServer }) {
