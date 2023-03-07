@@ -33,7 +33,7 @@ function AppBanner() {
             delay: 0.2,
           }}
           className='mt-4 text-lg leading-normal text-center text-gray-500 font-general-medium md:text-xl lg:text-2xl xl:text-3xl sm:text-left dark:text-gray-200'>
-          A Full-Stack Engineer, with a passion for building and designing
+          A Full-Stack Engineer, with a passion for building web applications and learning new technologies.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -45,10 +45,10 @@ function AppBanner() {
           }}
           className='flex justify-center sm:block'>
           <a
-            download='Stoman-Resume.pdf'
-            href='/files/Stoman-Resume.pdf'
+            download='rico-trebeljahr-resume.pdf'
+            href='/files/rico-trebeljahr-resume.pdf'
             className='flex items-center justify-center mt-12 mb-6 text-lg text-gray-500 border border-indigo-200 rounded-lg shadow-lg font-general-medium w-36 sm:w-48 sm:mb-0 dark:border-ternary-dark py-2.5 sm:py-3 bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 hover:text-white duration-500'
-            aria-label='Download Resume'>
+            aria-label='Download CV'>
             <FiArrowDownCircle className='w-5 h-5 ml-0 mr-2 sm:ml-1 sm:mr-3 sn:w-6 sm:h-6 duration-100'></FiArrowDownCircle>
             <span className='text-sm sm:text-lg duration-100'>Download CV</span>
           </a>
