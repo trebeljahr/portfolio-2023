@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import { AboutSections } from 'components/about'
+import { ContactSection } from 'components/contact'
 import PagesMetaHead from '../components/PagesMetaHead'
 import ProjectsGrid from '../components/projects/ProjectsGrid'
-import Button from '../components/reusable/Button'
 import AppBanner from '../components/shared/AppBanner'
 
 export default function Home() {
@@ -11,6 +11,8 @@ export default function Home() {
       <AppBanner />
 
       <ProjectsGrid />
+      <AboutSections />
+      <ContactSection />
     </div>
   )
 }

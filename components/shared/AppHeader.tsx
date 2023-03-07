@@ -79,16 +79,6 @@ function AppHeader() {
               ? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
               : 'hidden'
           }>
-          <div className='block pt-3 mb-2 text-lg text-left border-t-2 text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
-            <Link href='/about' aria-label='About Me'>
-              About Me
-            </Link>
-          </div>
-          <div className='block pt-3 mb-2 text-lg text-left border-t-2 text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
-            <Link href='/contact' aria-label='Contact'>
-              Contact
-            </Link>
-          </div>
           <div className='pt-3 border-t-2 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
             <button
               onClick={showHireMeModal}
@@ -96,21 +86,6 @@ function AppHeader() {
               aria-label='Hire Me Button'>
               Hire Me
             </button>
-          </div>
-        </div>
-
-        {/* Header links large screen */}
-        <div className='items-center justify-center hidden p-5 m-0 mt-5 shadow-lg font-general-medium sm:ml-4 sm:mt-3 sm:flex sm:p-0 sm:shadow-none'>
-          <div
-            className='block mb-2 text-lg font-medium text-left text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2'
-            aria-label='About Me'>
-            <Link href='/about'>About Me</Link>
-          </div>
-
-          <div
-            className='block mb-2 text-lg font-medium text-left text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2'
-            aria-label='Contact'>
-            <Link href='/contact'>Contact</Link>
           </div>
         </div>
 
