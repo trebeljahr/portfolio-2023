@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-const useThemeSwitcher = () => {
-  const [theme, setTheme] = useState < string > (typeof window !== 'undefined' ? localStorage.theme : '')
+const useThemeSwitcher = (): [string, Dispatch<SetStateAction<string>>] => {
+  const [theme, setTheme] = useState<string>(typeof window !== 'undefined' ? localStorage.theme : '')
   const activeTheme = theme === 'dark' ? 'light' : 'dark'
 
   useEffect(() => {

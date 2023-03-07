@@ -11,10 +11,8 @@ function HireMeModal({ onClose, onRequest }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className='fixed inset-0 z-30 font-general-medium transition-all duration-500'>
-      {/* Modal Backdrop */}
       <div className='fixed inset-0 z-20 w-full h-full bg-black bg-filter bg-opacity-50'></div>
 
-      {/* Modal Content */}
       <main className='flex flex-col items-center justify-center w-full h-full'>
         <div className='z-30 flex items-center modal-wrapper'>
           <div className='relative flex-row max-w-md max-h-screen mx-5 rounded-lg shadow-lg modal xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark'>

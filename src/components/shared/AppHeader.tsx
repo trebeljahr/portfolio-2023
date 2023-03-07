@@ -149,8 +149,10 @@ function AppHeader() {
         </div>
       </div>
       <div>
-        {showModal ? <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} /> : null}
-        {showModal ? showHireMeModal : null}
+        <>
+          {showModal ? <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} /> : null}
+          {showModal ? showHireMeModal : null}
+        </>
       </div>
     </motion.nav>
   )
