@@ -79,11 +79,6 @@ function AppHeader() {
               ? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
               : 'hidden'
           }>
-          <div className='block mb-2 text-lg text-left text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2'>
-            <Link href='/projects' aria-label='Projects'>
-              Projects
-            </Link>
-          </div>
           <div className='block pt-3 mb-2 text-lg text-left border-t-2 text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
             <Link href='/about' aria-label='About Me'>
               About Me
@@ -106,11 +101,6 @@ function AppHeader() {
 
         {/* Header links large screen */}
         <div className='items-center justify-center hidden p-5 m-0 mt-5 shadow-lg font-general-medium sm:ml-4 sm:mt-3 sm:flex sm:p-0 sm:shadow-none'>
-          <div
-            className='block mb-2 text-lg font-medium text-left text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2'
-            aria-label='Projects'>
-            <Link href='/projects'>Projects</Link>
-          </div>
           <div
             className='block mb-2 text-lg font-medium text-left text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2'
             aria-label='About Me'>
