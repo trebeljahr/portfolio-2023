@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
 type Props = {
-  title?: string,
-  keywords?: string[],
-  description?: string,
+  title?: string
+  keywords?: string
+  description?: string
 }
 
 function PagesMetaHead({ title, keywords, description }: Props) {
@@ -22,7 +22,7 @@ function PagesMetaHead({ title, keywords, description }: Props) {
 PagesMetaHead.defaultProps = {
   title: 'Next.js & TailwindCSS Portfolio Project',
   keywords: 'next.js, react, web, ui',
-  keywords: 'Simple and multi-page next.js and react application',
+  description: 'Simple and multi-page next.js and react application',
 }
 
 export default PagesMetaHead
