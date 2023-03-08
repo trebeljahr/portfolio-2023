@@ -24,7 +24,7 @@ export const Logo = ({ dark = false, ...props }: SVGProps<SVGSVGElement> & { dar
           />
         </g>
       </svg>
-      <h1 className='font-bold text-ternary-dark dark:text-primary-light'>TREBELJAHR</h1>
+      <p className='font-bold text-ternary-dark dark:text-primary-light'>TREBELJAHR</p>
     </div>
   )
 }

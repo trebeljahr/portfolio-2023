@@ -65,7 +65,7 @@ function HireMeModal({ onClose, onRequest }) {
                 <div className='pb-4 mt-6 sm:pb-1'>
                   <span
                     onClick={onRequest}
-                    className='px-4 py-2 text-white bg-indigo-500 sm:px-6 sm:py-2.5 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500'
+                    className='px-4 py-2 text-white bg-indigo-700 sm:px-6 sm:py-2.5 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500'
                     aria-label='Submit Request'>
                     <Button title='Send Request' />
                   </span>

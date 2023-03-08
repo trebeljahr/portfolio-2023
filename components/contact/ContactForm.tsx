@@ -54,7 +54,7 @@ function ContactForm() {
           </div>
 
           <div className='mt-6'>
-            <span className='py-4 mt-6 font-medium tracking-wider text-center text-white bg-indigo-500 rounded-lg font-general-medium px-7 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 duration-500'>
+            <span className='py-4 mt-6 font-medium tracking-wider text-center text-white bg-indigo-700 rounded-lg font-general-medium px-7 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 duration-500'>
               <Button title='Send Message' aria-label='Send Message' />
             </span>
           </div>

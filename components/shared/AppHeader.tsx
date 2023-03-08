@@ -1,3 +1,4 @@
+import Button from 'components/reusable/Button'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -31,27 +32,23 @@ function AppHeader() {
 
   return (
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} id='nav' className='sm:container sm:mx-auto'>
-      {/* Header */}
       <div className='z-10 block py-6 max-w-screen-lg xl:max-w-screen-xl sm:flex sm:justify-between sm:items-center'>
-        {/* Header menu links and small screen hamburger menu */}
         <div className='flex items-center justify-between px-4 sm:px-0'>
           <div>
             <Link href='/'>{theme === 'dark' ? <Logo dark /> : <Logo />}</Link>
           </div>
 
-          {/* Theme switcher small screen */}
-          <div
+          <button
             onClick={toggleTheme}
             aria-label='Theme Switcher'
             className='block p-3 ml-0 cursor-pointer sm:hidden bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl'>
             {theme === 'dark' ? (
-              <FiMoon className='text-xl text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light' />
+              <FiMoon className='text-xl text-ternary-dark' />
             ) : (
-              <FiSun className='text-xl text-gray-200 hover:text-gray-50' />
+              <FiSun className='text-xl text-gray-200' />
             )}
-          </div>
+          </button>
 
-          {/* Small screen hamburger menu */}
           <div className='sm:hidden'>
             <button onClick={toggleMenu} type='button' className='focus:outline-none' aria-label='Hamburger Menu'>
               <svg
@@ -64,7 +61,6 @@ function AppHeader() {
           </div>
         </div>
 
-        {/* Header links small screen */}
         <div
           className={
             showMenu
@@ -74,7 +70,7 @@ function AppHeader() {
           <div className='pt-3 border-t-2 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
             <button
               onClick={showHireMeModal}
-              className='block w-24 px-4 py-2 mt-2 text-left text-white bg-indigo-500 rounded-sm font-general-medium sm:hidden text-md hover:bg-indigo-600 shadow-sm duration-300'
+              className='block w-24 px-4 py-2 mt-2 text-left text-white bg-indigo-700 rounded-sm font-general-medium sm:hidden text-md hover:bg-indigo-600 shadow-sm duration-300'
               aria-label='Hire Me Button'>
               Hire Me
             </button>
@@ -85,7 +81,7 @@ function AppHeader() {
           <div className='hidden md:flex'>
             <button
               onClick={showHireMeModal}
-              className='px-5 text-white bg-indigo-500 text-md font-general-medium hover:bg-indigo-600 shadow-sm rounded-md py-2.5 duration-300'
+              className='px-5 text-white bg-indigo-700 text-md font-general-medium hover:bg-indigo-600 shadow-sm rounded-md py-2.5 duration-300'
               aria-label='Hire Me Button'>
               Hire Me
             </button>
@@ -96,9 +92,9 @@ function AppHeader() {
             aria-label='Theme Switcher'
             className='p-3 ml-8 cursor-pointer bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl'>
             {theme === 'dark' ? (
-              <FiSun className='text-xl text-gray-200 hover:text-gray-50' />
+              <FiSun className='text-xl text-gray-200' />
             ) : (
-              <FiMoon className='text-xl text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light' />
+              <FiMoon className='text-xl text-ternary-dark' />
             )}
           </div>
         </div>

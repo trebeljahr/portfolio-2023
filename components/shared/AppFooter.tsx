@@ -3,23 +3,23 @@ import AppFooterCopyright from './AppFooterCopyright'
 
 const socialLinks = [
   {
-    id: 1,
     icon: <FiGlobe />,
+    text: 'Blog',
     url: 'https://trebeljahr.com',
   },
   {
-    id: 2,
     icon: <FiGithub />,
+    text: 'GitHub',
     url: 'https://github.com/trebeljahr',
   },
   {
-    id: 3,
     icon: <FiTwitter />,
+    text: 'Twitter',
     url: 'https://twitter.com/ricotrebeljahr',
   },
   {
-    id: 4,
     icon: <FiLinkedin />,
+    text: 'LinkedIn',
     url: 'https://www.linkedin.com/in/ricotrebeljahr/',
   },
 ]
@@ -32,13 +32,15 @@ function AppFooter() {
           <p className='mb-5 text-3xl sm:text-4xl text-primary-dark dark:text-primary-light'>Follow me</p>
           <ul className='flex gap-4 sm:gap-8'>
             {socialLinks.map((link) => (
-              <a
-                href={link.url}
-                target='__blank'
-                key={link.id}
-                className='p-4 text-gray-400 rounded-lg cursor-pointer hover:text-indigo-500 dark:hover:text-indigo-400 bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm duration-300'>
-                <i className='text-xl sm:text-2xl md:text-3xl'>{link.icon}</i>
-              </a>
+              <li key={link.text}>
+                <a
+                  href={link.url}
+                  aria-label={link.text}
+                  target='__blank'
+                  className='p-4 text-gray-400 rounded-lg cursor-pointer hover:text-indigo-500 dark:hover:text-indigo-400 bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm duration-300'>
+                  <i className='text-xl sm:text-2xl md:text-3xl'>{link.icon}</i>
+                </a>
+              </li>
             ))}
           </ul>
         </div>
