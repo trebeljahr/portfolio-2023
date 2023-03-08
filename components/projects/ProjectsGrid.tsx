@@ -15,9 +15,9 @@ function ProjectsGrid() {
   return (
     <section className='py-5 mt-5 sm:py-10 sm:mt-10'>
       <div className='text-center'>
-        <p className='mb-1 text-2xl font-general-medium sm:text-4xl text-ternary-dark dark:text-ternary-light'>
+        <h3 className='mb-1 text-2xl font-general-medium sm:text-4xl text-ternary-dark dark:text-ternary-light'>
           Projects portfolio
-        </p>
+        </h3>
       </div>
 
       <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5'>

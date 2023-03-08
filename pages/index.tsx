@@ -1,4 +1,5 @@
-import { AboutSections } from 'components/about'
+import { AboutClients } from 'components/about/AboutClients'
+import { AboutMeBio } from 'components/about/AboutMeBio'
 import { ContactSection } from 'components/contact'
 import PagesMetaHead from '../components/PagesMetaHead'
 import ProjectsGrid from '../components/projects/ProjectsGrid'
@@ -10,8 +11,10 @@ export default function Home() {
       <PagesMetaHead title='Home' />
       <AppBanner />
 
+      <AboutMeBio />
+      <AboutClients />
+
       <ProjectsGrid />
-      <AboutSections />
       <ContactSection />
     </div>
   )

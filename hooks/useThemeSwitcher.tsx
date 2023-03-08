@@ -1,7 +1,14 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 const useThemeSwitcher = (): [string, () => void] => {
-  const [theme, setTheme] = useState<string>(typeof window !== 'undefined' ? localStorage.theme : '')
+  const [theme, setTheme] = useState<string>('')
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    const initialTheme = localStorage.getItem('theme')
+    root.classList.add(initialTheme)
+    setTheme(initialTheme)
+  }, [])
 
   function toggleTheme() {
     const nextTheme = theme === 'dark' ? 'light' : 'dark'

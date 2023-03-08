@@ -1,22 +1,34 @@
-import { useState } from 'react'
-import { clientsData } from '../../data/clientsData'
-import { clientsHeading } from '../../data/clientsData'
-import AboutClientSingle from './AboutClientSingle'
+import { motion } from 'framer-motion'
 
-function AboutClients() {
-  const [clients, setClients] = useState(clientsData)
+import { EsaLogo } from 'components/logos/EsaLogo'
+import { IronhackLogo } from 'components/logos/IronhackLogo'
+import { KlarnaLogo } from 'components/logos/KlarnaLogo'
+import { SoftgamesLogo } from 'components/logos/SoftgamesLogo'
+
+export function AboutClients() {
   return (
-    <div className='mt-10 sm:mt-20'>
-      <p className='text-2xl text-center font-general-medium sm:text-3xl text-primary-dark dark:text-primary-light'>
-        {clientsHeading}
-      </p>
-      <div className='mt-10 grid grid-cols-2 sm:grid-cols-4 sm:mt-14 gap-2'>
-        {clients.map((client) => (
-          <AboutClientSingle title={client.title} image={client.img} key={client.id} />
-        ))}
-      </div>
-    </div>
+    <section className='py-5 mt-5 sm:py-10 sm:mt-10'>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='container mx-auto'>
+        <div className='text-center'>
+          <h3 className='mb-1 text-2xl font-general-medium sm:text-4xl text-ternary-dark dark:text-ternary-light'>
+            Clients I&apos;ve worked with
+          </h3>
+        </div>
+        <div className='mt-2 grid grid-cols-2 sm:grid-cols-4 sm:mt-5 gap-2'>
+          <div className='px-5 py-1 mb-5 border rounded-lg shadow-lg cursor-pointer bg-secondary-light border-ternary-light dark:border-ternary-dark'>
+            <EsaLogo />
+          </div>
+          <div className='px-5 py-1 mb-5 border rounded-lg shadow-lg cursor-pointer bg-secondary-light border-ternary-light dark:border-ternary-dark'>
+            <KlarnaLogo />
+          </div>
+          <div className='px-5 py-1 mb-5 border rounded-lg shadow-lg cursor-pointer bg-secondary-light border-ternary-light dark:border-ternary-dark'>
+            <IronhackLogo />
+          </div>
+          <div className='px-5 py-1 mb-5 border rounded-lg shadow-lg cursor-pointer bg-secondary-light border-ternary-light dark:border-ternary-dark'>
+            <SoftgamesLogo />
+          </div>
+        </div>
+      </motion.div>
+    </section>
   )
 }
-
-export default AboutClients

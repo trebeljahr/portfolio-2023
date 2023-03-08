@@ -1,12 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
 
 export const aboutMeData = [
-	{
-		id: uuidv4(),
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-	},
-	{
-		id: uuidv4(),
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-	},
-];
+  {
+    id: uuidv4(),
+    bio: 'I am a full-stack engineer who specializes in Typescript, Node.js, and React. My passion lies in developing innovative and user-friendly applications that have a positive impact on the world. I am a natural problem-solver, always striving to improve my skills through new challenges and experiences. With my expertise in various programming languages, databases, and frameworks, I deliver high-quality solutions that exceed user expectations and meet the unique needs of the businesses I work with.',
+  },
+]

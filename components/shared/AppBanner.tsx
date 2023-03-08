@@ -58,11 +58,11 @@ function AppBanner() {
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-        className='float-right w-full mt-8 text-right sm:w-2/3 sm:mt-0'>
+        className='flex justify-center float-right w-full h-full mt-8 text-right sm:w-2/3 sm:mt-0'>
         <Image
           src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
-          width={200}
-          height={200}
+          width={600}
+          height={600}
           alt='Developer'
         />
       </motion.div>
