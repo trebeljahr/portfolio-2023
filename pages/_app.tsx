@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css'
+
 import DefaultLayout from '../components/layout/DefaultLayout'
 import UseScrollToTop from '../hooks/useScrollToTop'
 
@@ -8,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <DefaultLayout>
         <Component {...pageProps} />
       </DefaultLayout>
+
       <UseScrollToTop />
     </div>
   )

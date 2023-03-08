@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-const useThemeSwitcher = (): [string, () => void] => {
-  const [theme, setTheme] = useState<string>('')
+const useThemeSwitcher = (): ['light' | 'dark', () => void] => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
 
   useEffect(() => {
     const root = window.document.documentElement
-    const initialTheme = localStorage.getItem('theme')
+    const initialTheme = localStorage.getItem('theme') as 'light' | 'dark'
     root.classList.add(initialTheme)
     setTheme(initialTheme)
   }, [])
