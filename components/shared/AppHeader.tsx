@@ -87,16 +87,12 @@ function AppHeader() {
             </button>
           </div>
 
-          <div
+          <button
             onClick={toggleTheme}
             aria-label='Theme Switcher'
-            className='p-3 ml-8 cursor-pointer bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl'>
-            {theme === 'dark' ? (
-              <FiSun className='text-xl text-gray-200' />
-            ) : (
-              <FiMoon className='text-xl text-ternary-dark' />
-            )}
-          </div>
+            className='p-3 ml-8 text-gray-400 cursor-pointer hover:text-indigo-500 dark:hover:text-indigo-400 bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm rounded-xl'>
+            {theme === 'dark' ? <FiSun className='text-xl ' /> : <FiMoon className='text-xl ' />}
+          </button>
         </div>
       </div>
       <div>

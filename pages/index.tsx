@@ -12,9 +12,11 @@ export default function Home() {
       <AppBanner />
 
       <AboutMeBio />
-      <AboutClients />
 
       <ProjectsGrid />
+
+      <AboutClients />
+
       <ContactSection />
     </div>
   )
