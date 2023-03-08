@@ -1,4 +1,5 @@
 import { DownloadCVButton } from 'components/reusable/DownloadCVButton'
+import Link from 'next/link'
 import { FiMapPin, FiMail } from 'react-icons/fi'
 import { GiFeather } from 'react-icons/gi'
 
@@ -31,9 +32,9 @@ export function ContactDetails() {
             <i className='mt-1 mr-4 text-2xl text-neutral-500 dark:text-neutral-400'>
               <GiFeather />
             </i>
-            <a href='https://trebeljahr.com/cv' className='mb-4 text-lg hover-underline-animation '>
+            <Link href='/cv' className='mb-4 text-lg hover-underline-animation '>
               Resume/CV
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

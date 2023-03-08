@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --green: #5fc436;
-  --grey: #1e2228;
-  --green-grey: #39493c;
+#cv {
+  --highlight: #1b4ba7;
+  --text-main: #1e2228;
+  --text-secondary: #39493c;
+}
+
+.dark #cv {
+  --highlight: #86d7ff;
+  --text-main: #f9fcff;
+  --text-secondary: #c8c8c8;
 }
 
 html,
@@ -22,6 +28,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+#profile-image:hover .switchero {
+  display: none;
+}
+
+#profile-image:hover .hide-switchero {
+  display: block;
+}
+
+.hide-switchero {
+  display: none;
 }
 
 /* Fonts */

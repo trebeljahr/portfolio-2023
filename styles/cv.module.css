@@ -4,11 +4,7 @@
 }
 
 .cv-black-heading {
-  color: var(--green-grey) !important;
-}
-
-.cv-job-title {
-  display: none;
+  color: var(--text-secondary) !important;
 }
 
 .cv-circular {
@@ -16,8 +12,15 @@
 }
 
 .cv-image {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cv-header {
+  max-width: 70%;
 }
 
 .cv-section {
@@ -25,7 +28,7 @@
 }
 
 .cv-section a {
-  color: var(--green);
+  color: var(--highlight);
 }
 
 .cv-section > div {
@@ -48,7 +51,8 @@
 }
 
 .cv-container {
-  color: var(--grey);
+  position: relative;
+  color: var(--text-main);
   margin: auto;
   width: 100%;
   max-width: 95vw;
@@ -69,7 +73,6 @@
 }
 
 .cv-job-title {
-  margin-top: 5px;
   margin-bottom: 0;
 }
 
@@ -80,13 +83,12 @@
 .cv-divider {
   height: 2px;
   width: 100%;
-  background-color: var(--green);
+  background-color: var(--highlight);
   align-self: center;
 }
 
 .cv-container a {
   text-decoration: none;
-  color: var(--grey);
 }
 
 .cv-main-section {
@@ -96,12 +98,13 @@
 
 .cv-container ul {
   margin-left: 20px;
+  list-style: disc;
 }
 
 .cv-container h1,
 .cv-container h2,
 .cv-container h3 {
-  color: var(--green);
+  color: var(--highlight);
   margin-bottom: 0;
 }
 
@@ -126,32 +129,49 @@
   margin: 5px 0;
 }
 
+.cv-header {
+  display: flex;
+}
+
 @media only screen and (min-width: 900px) {
   .cv-job-title {
     margin-top: 2vh;
+  }
+
+  .cv-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
   }
 
   .cv-container ul {
     margin-top: 0;
   }
 
+  .cv-header {
+    max-width: 100%;
+  }
+
   .cv-name-heading {
     margin-left: 10px;
   }
+
+  .cv-contact-info {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
   .cv-name-heading h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-top: 0;
   }
   .cv-circular {
     border-radius: 100%;
   }
 
-  .cv-contact-info p,
-  .cv-contact-info a {
-    margin: 5px;
-  }
   .cv-header {
     display: grid;
-    grid-template-columns: 30% auto 20%;
+    grid-template-columns: 30% auto;
     margin: 4vh 0;
   }
   .cv-section {
