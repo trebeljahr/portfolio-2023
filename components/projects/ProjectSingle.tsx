@@ -16,10 +16,11 @@ const ProjectSingle = (props: { url: string; img: string; title: string; categor
           <div>
             <Image
               src={props.img}
-              className='border-none rounded-t-xl'
               alt='Single Project'
-              width={1850}
-              height={950}
+              width='0'
+              height='0'
+              sizes='(max-width: 1024px) 90vw, 50vw'
+              className='w-full h-auto border-none rounded-t-xl'
             />
           </div>
           <div className='px-4 py-6 text-center'>

@@ -61,8 +61,10 @@ function AppBanner() {
         className='flex justify-center float-right w-full h-full mt-8 text-right sm:w-2/3 sm:mt-0'>
         <Image
           src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
-          width={600}
-          height={600}
+          width='0'
+          height='0'
+          sizes='(max-width: 768px) 90vw, 50vw'
+          className='w-full h-auto border-none rounded-t-xl'
           loading='eager'
           alt='Developer'
         />
