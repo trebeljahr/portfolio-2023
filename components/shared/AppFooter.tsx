@@ -29,7 +29,7 @@ function AppFooter() {
     <div className='container mx-auto'>
       <div className='pt-20 pb-8 mt-20 border-t-2 sm:pt-30 border-primary-light dark:border-secondary-dark'>
         <div className='flex flex-col items-center justify-center mb-12 font-general-regular sm:mb-28'>
-          <p className='mb-5 text-3xl sm:text-4xl text-primary-dark dark:text-primary-light'>Follow me</p>
+          {/* <p className='mb-5 text-3xl sm:text-4xl text-primary-dark dark:text-primary-light'>Follow me</p> */}
           <ul className='flex gap-4 sm:gap-8'>
             {socialLinks.map((link) => (
               <li

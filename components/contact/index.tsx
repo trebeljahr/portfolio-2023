@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import ContactDetails from './ContactDetails'
-import ContactForm from './ContactForm'
+import { ContactDetails } from './ContactDetails'
+import { ContactForm } from './ContactForm'
 
 export function ContactSection() {
   return (
@@ -15,7 +15,6 @@ export function ContactSection() {
         }}
         className='container flex flex-col-reverse py-5 mx-auto lg:flex-row lg:py-10 lg:mt-5'>
         <ContactForm />
-
         <ContactDetails />
       </motion.div>
     </div>

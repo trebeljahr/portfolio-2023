@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import { aboutMeData } from '../../data/aboutMeData'
 import { motion } from 'framer-motion'
 
 export function AboutMeBio() {
@@ -18,12 +17,17 @@ export function AboutMeBio() {
           />
         </div>
 
-        <div className='w-full text-left font-general-regular sm:w-3/4'>
-          {aboutMeData.map((bio) => (
-            <p className='mb-4 text-lg text-ternary-dark dark:text-ternary-light' key={bio.id}>
-              {bio.bio}
-            </p>
-          ))}
+        <div className='w-full text-left sm:w-3/4'>
+          <p className='mb-4 text-lg leading-normal text-ternary-dark dark:text-ternary-light'>
+            My passion lies in developing innovative and user-friendly applications that have a positive impact on the
+            world. I am a natural problem-solver, always striving to improve my skills through new challenges and
+            experiences. I specialize in Typescript, Node.js, and React. With my expertise in various programming
+            languages, databases, and frameworks, I deliver high-quality solutions that exceed user expectations and
+            meet the unique needs of the businesses I work with. For more info about me you can also{' '}
+            <a href='https://trebeljahr.com/cv' className='hover-underline-animation'>
+              check out my CV.
+            </a>
+          </p>
         </div>
       </div>
     </motion.div>

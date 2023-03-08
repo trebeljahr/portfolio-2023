@@ -1,8 +1,9 @@
+import { BsFillSendFill } from 'react-icons/bs'
 import FormInput from '../reusable/FormInput'
 
-function ContactForm() {
+export function ContactForm() {
   return (
-    <div className='w-full lg:w-1/2'>
+    <div id='contact-form' className='w-full lg:w-1/2'>
       <div className='leading-loose'>
         <form
           onSubmit={(e) => {
@@ -54,14 +55,13 @@ function ContactForm() {
           </div>
 
           <div className='mt-6'>
-            <span className='py-4 mt-6 font-medium tracking-wider text-center text-white bg-indigo-700 rounded-lg font-general-medium px-7 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 duration-500'>
-              <button>Send Message </button>
-            </span>
+            <button className='flex items-center justify-center mt-12 mb-6 text-lg text-gray-600 border border-indigo-200 rounded-lg shadow-lg font-general-medium w-36 sm:w-48 sm:mb-0 dark:border-ternary-dark py-2.5 sm:py-3 bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 hover:text-white duration-500'>
+              <BsFillSendFill className='w-5 h-5 ml-0 mr-2 sm:ml-1 sm:mr-3 sn:w-6 sm:h-6 duration-100' />
+              <span className='text-sm sm:text-lg duration-100'>Send Message</span>
+            </button>
           </div>
         </form>
       </div>
     </div>
   )
 }
-
-export default ContactForm

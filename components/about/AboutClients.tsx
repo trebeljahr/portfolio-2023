@@ -11,7 +11,7 @@ export function AboutClients() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='container mx-auto'>
         <div className='text-center'>
           <h2 className='mb-1 text-2xl font-general-medium sm:text-4xl text-ternary-dark dark:text-ternary-light'>
-            Clients I&apos;ve worked with in the past
+            Companies I&apos;ve worked with
           </h2>
         </div>
         <div className='mt-2 grid grid-cols-2 sm:grid-cols-4 sm:mt-5 gap-2'>
