@@ -38,7 +38,7 @@ export function ContactForm() {
         position: 'top-right' as 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
-        pauseOnHover: true,
+        pauseOnHover: false,
         theme,
       }
       if (!form.current) return
