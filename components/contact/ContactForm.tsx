@@ -24,14 +24,9 @@ export function ContactForm() {
     }
   }, [])
 
-  useEffect(() => {
-    console.log(emailIsSending)
-  }, [emailIsSending])
-
   const submitForm = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault()
 
-    // console.log(emailIsSending)
     if (emailIsSending) return
 
     setEmailIsSending(true)
