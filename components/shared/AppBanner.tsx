@@ -63,7 +63,7 @@ function AppBanner() {
           src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
           width='0'
           height='0'
-          sizes='(max-width: 768px) 90vw, 50vw'
+          sizes='(min-width: 1540px) 853px, (min-width: 1280px) 725px, (min-width: 1040px) 576px, (min-width: 780px) 469px, (min-width: 640px) 230px, calc(100vw - 32px)'
           className='w-full h-auto border-none rounded-t-xl'
           loading='eager'
           alt='Developer'

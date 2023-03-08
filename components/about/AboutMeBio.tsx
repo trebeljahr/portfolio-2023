@@ -12,7 +12,7 @@ export function AboutMeBio() {
             src='/images/profile.jpeg'
             width='0'
             height='0'
-            sizes='(max-width: 768px) 90vw, 20vw'
+            sizes='(min-width: 1540px) 246px, (min-width: 1280px) 214px, (min-width: 1040px) 166px, (min-width: 780px) 150px, (min-width: 640px) 118px, calc(100vw - 64px)'
             className='w-full h-auto rounded-lg'
             alt='Profile Image'
           />

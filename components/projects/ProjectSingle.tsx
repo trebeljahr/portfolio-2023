@@ -19,7 +19,7 @@ const ProjectSingle = (props: { url: string; img: string; title: string; categor
               alt='Single Project'
               width='0'
               height='0'
-              sizes='(max-width: 1024px) 90vw, 50vw'
+              sizes='(min-width: 1540px) 630px, (min-width: 1280px) 534px, (min-width: 1040px) 422px, (min-width: 780px) 704px, (min-width: 640px) 576px, calc(100vw - 32px)'
               className='w-full h-auto border-none rounded-t-xl'
             />
           </div>
