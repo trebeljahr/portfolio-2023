@@ -7,7 +7,7 @@ function AppFooterCopyright() {
           href='https://trebeljahr.com'
           target='__blank'
           className='ml-1 font-medium uppercase text-secondary-dark dark:text-secondary-light hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 duration-500'>
-          Trebeljahr
+          Rico Trebeljahr
         </a>
       </div>
     </div>

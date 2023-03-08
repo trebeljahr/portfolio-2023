@@ -9,7 +9,7 @@ export function AboutMeBio() {
       <div className='block mt-10 sm:flex sm:gap-10 sm:mt-20'>
         <div className='w-full sm:w-1/4 mb-7 sm:mb-0'>
           <Image
-            src='/images/profile.jpeg'
+            src='/images/profile.jpg'
             width='0'
             height='0'
             sizes='(min-width: 1540px) 246px, (min-width: 1280px) 214px, (min-width: 1040px) 166px, (min-width: 780px) 150px, (min-width: 640px) 118px, calc(100vw - 64px)'

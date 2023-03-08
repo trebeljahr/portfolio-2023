@@ -21,7 +21,7 @@ function AppBanner() {
             duration: 0.9,
             delay: 0.1,
           }}
-          className='text-2xl text-center uppercase font-general-semibold lg:text-3xl xl:text-4xl sm:text-left text-ternary-dark dark:text-primary-light'>
+          className='text-2xl text-center font-general-semibold lg:text-3xl xl:text-4xl sm:text-left text-ternary-dark dark:text-primary-light'>
           Hi, I am Rico
         </motion.h1>
         <motion.p
@@ -32,7 +32,7 @@ function AppBanner() {
             duration: 0.9,
             delay: 0.2,
           }}
-          className='mt-4 text-lg leading-normal text-center text-gray-500 font-general-medium md:text-xl lg:text-2xl xl:text-3xl sm:text-left dark:text-gray-200'>
+          className='mt-4 leading-normal text-center text-gray-500 text-md font-general-medium md:text-xl lg:text-2xl xl:text-3xl sm:text-left dark:text-gray-200'>
           A Full-Stack Engineer, with a passion for building web applications and learning new technologies.
         </motion.p>
         <motion.div
@@ -64,7 +64,7 @@ function AppBanner() {
           width='0'
           height='0'
           sizes='(min-width: 1540px) 853px, (min-width: 1280px) 725px, (min-width: 1040px) 576px, (min-width: 780px) 469px, (min-width: 640px) 230px, calc(100vw - 32px)'
-          className='w-full h-auto border-none rounded-t-xl'
+          className='w-6/12 h-auto border-none rounded-t-xl'
           loading='eager'
           alt='Developer'
         />

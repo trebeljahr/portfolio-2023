@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
-import Button from './reusable/Button'
 
 const selectOptions = ['Web Application', 'Mobile Application', 'UI/UX Design', 'Branding']
 
@@ -67,7 +66,7 @@ function HireMeModal({ onClose, onRequest }) {
                     onClick={onRequest}
                     className='px-4 py-2 text-white bg-indigo-700 sm:px-6 sm:py-2.5 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500'
                     aria-label='Submit Request'>
-                    <Button title='Send Request' />
+                    <button>Send Request </button>
                   </span>
                 </div>
               </form>
@@ -77,7 +76,7 @@ function HireMeModal({ onClose, onRequest }) {
                 onClick={onClose}
                 className='px-4 py-2 bg-gray-600 sm:px-6 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light rounded-md focus:ring-1 focus:ring-indigo-900 duration-500'
                 aria-label='Close Modal'>
-                <Button title='Close' />
+                <button>Close </button>
               </span>
             </div>
           </div>

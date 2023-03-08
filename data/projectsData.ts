@@ -2,17 +2,22 @@ import { v4 as uuidv4 } from 'uuid'
 
 export const projectsData = [
   {
-    title: 'Minecraft Clone',
-    url: 'https://mc.ricotrebeljahr.com',
-    category: '3D web application',
-    img: '/images/minecraft-clone.png',
-  },
-
-  {
     title: 'Fractal Garden',
     url: 'https://fractal.garden',
     category: '3D web application',
     img: '/images/fractal-garden.png',
+  },
+  {
+    title: 'trebeljahr',
+    url: 'https://trebeljahr.com/posts',
+    category: 'Personal Blog',
+    img: '/images/blog.png',
+  },
+  {
+    title: 'Minecraft Clone',
+    url: 'https://mc.ricotrebeljahr.com',
+    category: '3D web application',
+    img: '/images/minecraft-clone.png',
   },
 
   {
@@ -26,12 +31,6 @@ export const projectsData = [
     url: 'https://asteroids.ricotrebeljahr.com',
     category: '3D web application',
     img: '/images/asteroids.png',
-  },
-  {
-    title: 'trebeljahr',
-    url: 'https://trebeljahr.com/posts',
-    category: 'Personal Blog',
-    img: '/images/blog.png',
   },
   {
     title: 'Raptor Game',

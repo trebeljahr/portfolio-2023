@@ -1,10 +1,9 @@
-import Button from 'components/reusable/Button'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
-import HireMeModal from '../HireMeModal'
+import ContactMeModal from '../HireMeModal'
 import { Logo } from '../logos/Logo'
 
 function AppHeader() {
@@ -20,7 +19,7 @@ function AppHeader() {
     }
   }
 
-  function showHireMeModal() {
+  function showContactMeModal() {
     if (!showModal) {
       document.getElementsByTagName('html')[0].classList.add('overflow-y-hidden')
       setShowModal(true)
@@ -69,10 +68,9 @@ function AppHeader() {
           }>
           <div className='pt-3 border-t-2 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
             <button
-              onClick={showHireMeModal}
-              className='block w-24 px-4 py-2 mt-2 text-left text-white bg-indigo-700 rounded-sm font-general-medium sm:hidden text-md hover:bg-indigo-600 shadow-sm duration-300'
-              aria-label='Hire Me Button'>
-              Hire Me
+              onClick={showContactMeModal}
+              className='block w-24 px-4 py-2 mt-2 text-left text-white bg-indigo-700 rounded-sm font-general-medium sm:hidden text-md hover:bg-indigo-600 shadow-sm duration-300'>
+              Contact Me
             </button>
           </div>
         </div>
@@ -80,10 +78,9 @@ function AppHeader() {
         <div className='flex-col items-center justify-between hidden sm:flex md:flex-row'>
           <div className='hidden md:flex'>
             <button
-              onClick={showHireMeModal}
-              className='px-5 text-white bg-indigo-700 text-md font-general-medium hover:bg-indigo-600 shadow-sm rounded-md py-2.5 duration-300'
-              aria-label='Hire Me Button'>
-              Hire Me
+              onClick={showContactMeModal}
+              className='px-5 text-white bg-indigo-700 text-md font-general-medium hover:bg-indigo-600 shadow-sm rounded-md py-2.5 duration-300'>
+              Contact Me
             </button>
           </div>
 
@@ -97,8 +94,8 @@ function AppHeader() {
       </div>
       <div>
         <>
-          {showModal ? <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} /> : null}
-          {showModal ? showHireMeModal : null}
+          {showModal ? <ContactMeModal onClose={showContactMeModal} onRequest={showContactMeModal} /> : null}
+          {showModal ? showContactMeModal : null}
         </>
       </div>
     </motion.nav>

@@ -1,4 +1,3 @@
-import Button from '../reusable/Button'
 import FormInput from '../reusable/FormInput'
 
 function ContactForm() {
@@ -50,12 +49,13 @@ function ContactForm() {
               name='message'
               cols={14}
               rows={6}
-              aria-label='Message'></textarea>
+              aria-label='Message'
+            />
           </div>
 
           <div className='mt-6'>
             <span className='py-4 mt-6 font-medium tracking-wider text-center text-white bg-indigo-700 rounded-lg font-general-medium px-7 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 duration-500'>
-              <Button title='Send Message' aria-label='Send Message' />
+              <button>Send Message </button>
             </span>
           </div>
         </form>
