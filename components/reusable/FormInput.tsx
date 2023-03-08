@@ -8,6 +8,7 @@ const FormInput = ({
   ariaLabelName,
   onChange,
   children = null,
+  value,
 }) => {
   return (
     <div className='mb-4 font-general-regular'>
@@ -19,6 +20,7 @@ const FormInput = ({
         type={inputType}
         id={inputId}
         name={inputName}
+        value={value}
         placeholder={placeholderText}
         aria-label={ariaLabelName}
         required

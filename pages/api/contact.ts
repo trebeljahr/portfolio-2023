@@ -31,13 +31,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const { from, subject, text, name } = req.body as RequestBody
 
-      const message = `${name} sent you a message via your portfolio website: \n ${text}`
       const data = {
-        from,
+        from: `${name} <${from}>`,
         to: 'ricotrebeljahr@gmail.com',
         subject,
-        html: message,
-        text: message,
+        html: text,
+        text: text,
       }
 
       await sendEmail(data)

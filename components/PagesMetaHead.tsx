@@ -20,7 +20,7 @@ function PagesMetaHead({ title, keywords, description }: Props) {
 }
 
 PagesMetaHead.defaultProps = {
-  title: 'Next.js & TailwindCSS Portfolio Project',
+  title: "Rico Trebeljahr's Epic Portfolio",
   keywords: 'next.js, react, web, ui',
   description: "Take a peek at Rico Trebeljahr's portfolio webpage",
 }

@@ -91,6 +91,7 @@ export function ContactForm() {
             inputName='name'
             placeholderText='Your Name'
             ariaLabelName='Name'
+            value={formState.name}
             onChange={updateFormState}>
             <p className='hidden peer-invalid:block text-red-700 font-light'>Please enter a name.</p>
           </FormInput>
@@ -100,6 +101,7 @@ export function ContactForm() {
             inputType='email'
             inputId='email'
             inputName='email'
+            value={formState.email}
             placeholderText='Your email'
             ariaLabelName='Email'
             onChange={updateFormState}>
@@ -109,6 +111,7 @@ export function ContactForm() {
             inputLabel='Subject'
             labelFor='subject'
             inputType='text'
+            value={formState.subject}
             inputId='subject'
             inputName='subject'
             placeholderText='Subject'
@@ -127,6 +130,7 @@ export function ContactForm() {
               name='message'
               cols={14}
               rows={6}
+              value={formState.message}
               aria-label='Message'
               onChange={updateFormState}
             />
