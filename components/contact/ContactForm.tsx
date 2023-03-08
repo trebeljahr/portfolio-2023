@@ -17,7 +17,6 @@ export function ContactForm() {
 
     async function postData() {
       const theme = window.document.documentElement.className as 'light' | 'dark'
-      console.log(theme)
       try {
         const data = {
           name: formState.name,
@@ -49,8 +48,6 @@ export function ContactForm() {
           theme,
         })
       } catch (error) {
-        console.log("An error occurred while trying to send the form's data to the server.")
-        console.log(error)
         toast.error('Oops, something broke there. Maybe, try again?', {
           position: 'top-right',
           autoClose: 3000,
@@ -68,12 +65,10 @@ export function ContactForm() {
 
   function updateFormState(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setFormState((old) => {
-      console.log(event.target.name, event.target.value)
       const newState = {
         ...old,
         [event.target.name]: event.target.value,
       }
-      console.log(newState)
       return newState
     })
   }

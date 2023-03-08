@@ -40,8 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         text: message,
       }
 
-      console.log(data)
-
       await sendEmail(data)
 
       res.json({
