@@ -1,7 +1,6 @@
-import useThemeSwitcher from 'hooks/useThemeSwitcher'
 import { MouseEvent, useEffect, useRef, useState } from 'react'
 import { BsFillSendFill } from 'react-icons/bs'
-import { toast } from 'react-toastify'
+import { toast, ToastOptions } from 'react-toastify'
 import FormInput from '../reusable/FormInput'
 
 export function ContactForm() {
@@ -12,21 +11,39 @@ export function ContactForm() {
     message: '',
   })
 
+  const [emailIsSending, setEmailIsSending] = useState(false)
   const form = useRef<HTMLFormElement>()
+
+  useEffect(() => {
+    const unsubscribe = toast.onChange((change) => {
+      if (change.status === 'removed') setEmailIsSending(false)
+    })
+
+    return () => {
+      unsubscribe()
+    }
+  }, [])
+
+  useEffect(() => {
+    console.log(emailIsSending)
+  }, [emailIsSending])
 
   const submitForm = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault()
 
+    // console.log(emailIsSending)
+    if (emailIsSending) return
+
+    setEmailIsSending(true)
+
     async function postData() {
       const theme = window.document.documentElement.className as 'light' | 'dark'
-      const toastOptions = {
+
+      const toastOptions: ToastOptions = {
         position: 'top-right' as 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
-        closeOnClick: true,
         pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme,
       }
       if (!form.current) return
@@ -60,6 +77,7 @@ export function ContactForm() {
         toast("🦄 Your message is on it's way", toastOptions)
       } catch (error) {
         toast.error('Oops, something broke there. Maybe, try again?', toastOptions)
+        setEmailIsSending(false)
       }
     }
     postData()
