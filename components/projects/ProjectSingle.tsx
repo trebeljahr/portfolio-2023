@@ -14,7 +14,13 @@ const ProjectSingle = (props: { url: string; img: string; title: string; categor
       <a href={props.url} aria-label='Single Project' target='_blank' rel='noreferrer'>
         <div className='mb-10 shadow-lg cursor-pointer rounded-xl hover:shadow-xl sm:mb-0 bg-secondary-light dark:bg-ternary-dark'>
           <div>
-            <Image src={props.img} className='border-none rounded-t-xl' alt='Single Project' width={100} height={90} />
+            <Image
+              src={props.img}
+              className='border-none rounded-t-xl'
+              alt='Single Project'
+              width={1850}
+              height={950}
+            />
           </div>
           <div className='px-4 py-6 text-center'>
             <p className='mb-2 text-xl font-general-medium md:text-2xl text-ternary-dark dark:text-ternary-light'>

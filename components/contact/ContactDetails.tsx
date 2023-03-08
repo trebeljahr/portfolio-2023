@@ -8,7 +8,7 @@ const contacts = [
   },
   {
     id: 2,
-    name: 'reach@trebeljahr.com',
+    name: 'hello@ricotrebeljahr.com',
     icon: <FiMail />,
   },
   {
