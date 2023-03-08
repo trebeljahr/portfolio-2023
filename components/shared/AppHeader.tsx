@@ -7,11 +7,12 @@ import HireMeModal from '../HireMeModal'
 import logoLight from '../../public/images/logo-light.svg'
 import logoDark from '../../public/images/logo-dark.svg'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
+import { Logo } from './Logo'
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false)
   const [showModal, setShowModal] = useState(false)
-  const [activeTheme, setTheme] = useThemeSwitcher()
+  const [theme, toggleTheme] = useThemeSwitcher()
 
   function toggleMenu() {
     if (!showMenu) {
@@ -38,21 +39,15 @@ function AppHeader() {
         {/* Header menu links and small screen hamburger menu */}
         <div className='flex items-center justify-between px-4 sm:px-0'>
           <div>
-            <Link href='/'>
-              {activeTheme === 'dark' ? (
-                <Image src={logoDark} className='cursor-pointer w-36' alt='Dark Logo' width={150} height={120} />
-              ) : (
-                <Image src={logoLight} className='cursor-pointer w-36' alt='Dark Logo' width={150} height={120} />
-              )}
-            </Link>
+            <Link href='/'>{theme === 'dark' ? <Logo dark /> : <Logo />}</Link>
           </div>
 
           {/* Theme switcher small screen */}
           <div
-            onClick={() => setTheme(activeTheme)}
+            onClick={toggleTheme}
             aria-label='Theme Switcher'
             className='block p-3 ml-0 cursor-pointer sm:hidden bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl'>
-            {activeTheme === 'dark' ? (
+            {theme === 'dark' ? (
               <FiMoon className='text-xl text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light' />
             ) : (
               <FiSun className='text-xl text-gray-200 hover:text-gray-50' />
@@ -89,7 +84,6 @@ function AppHeader() {
           </div>
         </div>
 
-        {/* Header right section buttons */}
         <div className='flex-col items-center justify-between hidden sm:flex md:flex-row'>
           <div className='hidden md:flex'>
             <button
@@ -100,15 +94,14 @@ function AppHeader() {
             </button>
           </div>
 
-          {/* Theme switcher large screen */}
           <div
-            onClick={() => setTheme(activeTheme)}
+            onClick={toggleTheme}
             aria-label='Theme Switcher'
             className='p-3 ml-8 cursor-pointer bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl'>
-            {activeTheme === 'dark' ? (
-              <FiMoon className='text-xl text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light' />
-            ) : (
+            {theme === 'dark' ? (
               <FiSun className='text-xl text-gray-200 hover:text-gray-50' />
+            ) : (
+              <FiMoon className='text-xl text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light' />
             )}
           </div>
         </div>
