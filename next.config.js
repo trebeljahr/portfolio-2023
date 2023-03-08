@@ -12,7 +12,7 @@ const nextConfig = {
   i18n: {
     locales: ['en-US'],
     defaultLocale: 'en-US',
-    domains: [{ domain: 'example.com', defaultLocale: 'en-US' }],
+    domains: [{ domain: 'https://portfolio.trebeljahr.com', defaultLocale: 'en-US' }],
   },
   images: {},
   reactStrictMode: true,
