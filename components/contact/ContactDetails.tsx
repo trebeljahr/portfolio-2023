@@ -1,45 +1,41 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi'
 
 const contacts = [
-	{
-		id: 1,
-		name: 'Your Address, Your City, Your Country',
-		icon: <FiMapPin />,
-	},
-	{
-		id: 2,
-		name: 'email@domain.com',
-		icon: <FiMail />,
-	},
-	{
-		id: 3,
-		name: '555 8888 888',
-		icon: <FiPhone />,
-	},
-];
+  {
+    id: 1,
+    name: 'Berlin, Germany',
+    icon: <FiMapPin />,
+  },
+  {
+    id: 2,
+    name: 'reach@trebeljahr.com',
+    icon: <FiMail />,
+  },
+  {
+    id: 3,
+    name: '+4915234194080',
+    icon: <FiPhone />,
+  },
+]
 
 function ContactDetails() {
-	return (
-		<div className="w-full lg:w-1/2">
-			<div className="text-left max-w-xl px-6">
-				<h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
-					Contact details
-				</h2>
-				<ul>
-					{contacts.map((contact) => (
-						<li className="flex " key={contact.id}>
-							<i className="text-2xl text-neutral-500 dark:text-neutral-400 mr-4 mt-1">
-								{contact.icon}
-							</i>
-							<span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
-								{contact.name}
-							</span>
-						</li>
-					))}
-				</ul>
-			</div>
-		</div>
-	);
+  return (
+    <div className='w-full lg:w-1/2'>
+      <div className='max-w-xl px-6 text-left'>
+        <h2 className='mt-12 mb-8 text-2xl font-general-medium text-primary-dark dark:text-primary-light'>
+          Contact details
+        </h2>
+        <ul>
+          {contacts.map((contact) => (
+            <li className='flex ' key={contact.id}>
+              <i className='mt-1 mr-4 text-2xl text-neutral-500 dark:text-neutral-400'>{contact.icon}</i>
+              <span className='mb-4 text-lg text-ternary-dark dark:text-ternary-light'>{contact.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
 }
 
-export default ContactDetails;
+export default ContactDetails
