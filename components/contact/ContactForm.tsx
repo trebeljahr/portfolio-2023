@@ -1,5 +1,5 @@
 import useThemeSwitcher from 'hooks/useThemeSwitcher'
-import { MouseEvent, useEffect, useState } from 'react'
+import { MouseEvent, useEffect, useRef, useState } from 'react'
 import { BsFillSendFill } from 'react-icons/bs'
 import { toast } from 'react-toastify'
 import FormInput from '../reusable/FormInput'
@@ -12,11 +12,31 @@ export function ContactForm() {
     message: '',
   })
 
+  const form = useRef<HTMLFormElement>()
+
   const submitForm = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault()
 
     async function postData() {
       const theme = window.document.documentElement.className as 'light' | 'dark'
+      const toastOptions = {
+        position: 'top-right' as 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme,
+      }
+      if (!form.current) return
+      const allInputs = form?.current?.querySelectorAll('input')
+      const anyInputFails = [...allInputs].some(() => {
+        return !form.current.checkValidity()
+      })
+      if (anyInputFails) {
+        return toast.error('Your form still has errors in it 😔', toastOptions)
+      }
       try {
         const data = {
           name: formState.name,
@@ -37,27 +57,9 @@ export function ContactForm() {
         }
 
         setFormState({ name: '', email: '', subject: '', message: '' })
-        toast("🦄 Your message is on it's way", {
-          position: 'top-right',
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme,
-        })
+        toast("🦄 Your message is on it's way", toastOptions)
       } catch (error) {
-        toast.error('Oops, something broke there. Maybe, try again?', {
-          position: 'top-right',
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme,
-        })
+        toast.error('Oops, something broke there. Maybe, try again?', toastOptions)
       }
     }
     postData()
@@ -76,7 +78,9 @@ export function ContactForm() {
   return (
     <div id='contact-form' className='w-full lg:w-1/2'>
       <div className='leading-loose'>
-        <form className='max-w-xl p-6 m-4 text-left shadow-xl sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl'>
+        <form
+          ref={form}
+          className='max-w-xl p-6 m-4 text-left shadow-xl sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl'>
           <p className='mb-8 text-2xl font-general-medium text-primary-dark dark:text-primary-light'>Contact Form</p>
 
           <FormInput
@@ -87,8 +91,9 @@ export function ContactForm() {
             inputName='name'
             placeholderText='Your Name'
             ariaLabelName='Name'
-            onChange={updateFormState}
-          />
+            onChange={updateFormState}>
+            <p className='hidden peer-invalid:block text-red-700 font-light'>Please enter a name.</p>
+          </FormInput>
           <FormInput
             inputLabel='Email'
             labelFor='email'
@@ -108,8 +113,9 @@ export function ContactForm() {
             inputName='subject'
             placeholderText='Subject'
             ariaLabelName='Subject'
-            onChange={updateFormState}
-          />
+            onChange={updateFormState}>
+            <p className='hidden peer-invalid:block text-red-700 font-light'>Please enter a subject.</p>
+          </FormInput>
 
           <div className='mt-6'>
             <label className='block mb-2 text-lg text-primary-dark dark:text-primary-light' htmlFor='message'>
@@ -126,10 +132,10 @@ export function ContactForm() {
             />
           </div>
 
-          <div className='mt-6'>
+          <div className='mt-3'>
             <button
               onClick={submitForm}
-              className='flex items-center justify-center mt-12 mb-6 text-lg text-gray-600 border border-indigo-200 rounded-lg shadow-lg font-general-medium w-36 sm:w-48 sm:mb-0 dark:border-ternary-dark py-2.5 sm:py-3  bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:ring-darkblue hover:border-darkblue hover:bg-darkblue hover:text-white duration-500'>
+              className='flex items-center justify-center mt-8 mb-6 text-lg text-gray-600 border border-indigo-200 rounded-lg shadow-lg font-general-medium w-36 sm:w-48 sm:mb-0 dark:border-ternary-dark py-2.5 sm:py-3  bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:ring-darkblue hover:border-darkblue hover:bg-darkblue hover:text-white duration-500'>
               <BsFillSendFill className='w-5 h-5 ml-0 mr-2 sm:ml-1 sm:mr-3 sn:w-6 sm:h-6 duration-100' />
               <span className='text-sm sm:text-lg duration-100'>Send Message</span>
             </button>
