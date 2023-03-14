@@ -20,7 +20,7 @@ const socialLinks = [
   {
     icon: <FiLinkedin />,
     text: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/ricotrebeljahr/',
+    url: 'https://www.linkedin.com/in/trebeljahr/',
   },
 ]
 
