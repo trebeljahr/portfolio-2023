@@ -127,8 +127,8 @@ export default function CVPage() {
           <p>
             During this project I used ThreeJS to create a small demo clone of the popular game Minecraft. The twist is
             – this one runs as a webpage and in the browser:
-            <a href='https://mc.ricotrebeljahr.com' className='hover-underline-animation'>
-              mc.ricotrebeljahr.com
+            <a href='https://mc.trebeljahr.com' className='hover-underline-animation'>
+              mc.trebeljahr.com
             </a>
           </p>
         </div>

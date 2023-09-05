@@ -15,7 +15,7 @@ export const projectsData = [
   },
   {
     title: 'Minecraft Clone',
-    url: 'https://mc.ricotrebeljahr.com',
+    url: 'https://mc.trebeljahr.com',
     category: 'custom 3D voxel engine',
     img: '/images/minecraft-clone.png',
   },
@@ -28,13 +28,13 @@ export const projectsData = [
   },
   {
     title: 'Asteroids Game',
-    url: 'https://asteroids.ricotrebeljahr.com',
+    url: 'https://asteroids.trebeljahr.com',
     category: '2D browser racing game',
     img: '/images/asteroids.png',
   },
   {
     title: 'Raptor Game',
-    url: 'https://raptor.ricotrebeljahr.com',
+    url: 'https://raptor.trebeljahr.com',
     category: 'my chrome dinosaur game',
     img: '/images/raptor.png',
   },
