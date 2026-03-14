@@ -44,10 +44,51 @@ export default function CVPage() {
           <h2 className={styles['cv-black-heading']}>Work</h2>
           <div className={styles['cv-divider']} />
         </div>
+
+        <div className={styles['cv-section']}>
+          <div>
+            <h3>Ricos Site</h3>
+            <p className={styles['cv-date']}>2021 - Now</p>
+          </div>
+          <p>
+            Self hosted blog, newsletter, booknotes and{' '}
+            <a href='https://ricos.site/r3f' className='hover-underline-animation'>
+              three.js experiments playground
+            </a>{' '}
+            , where I am writing newsletters and posts on AI, web development, traveling and experiment with real time
+            3D graphics in the browser.
+            <p>
+              Check it out at{' '}
+              <a href='https://ricos.site' className='hover-underline-animation'>
+                ricos.site
+              </a>
+              .
+            </p>
+          </p>
+        </div>
+
+        <div className={styles['cv-section']}>
+          <div>
+            <h3>Flowkey</h3>
+            <p className={styles['cv-date']}>Oct. 2025</p>
+          </div>
+          <p>Implemented different cookie consent designs for Flowkey in their Next.js powered Website and Webapp.</p>
+        </div>
+
+        <div className={styles['cv-section']}>
+          <div>
+            <h3>Henkel</h3>
+            <p className={styles['cv-date']}>Apr. 2023 - Nov. 2023</p>
+          </div>
+          <p>
+            Built and maintained scalable microservice based data pipeline for Henkel within Microsoft Azure. Mostly
+            focused on implementing E2E tests and improving CI/CD processes.
+          </p>
+        </div>
         <div className={styles['cv-section']}>
           <div>
             <h3>Ironhack</h3>
-            <p className={styles['cv-date']}>Jan. 2022 - now</p>
+            <p className={styles['cv-date']}>Jan. 2022 - Jun. 2023</p>
           </div>
           <p>
             Lead the teaching efforts of 3 cohorts at Ironhack, teaching 60+ people how to become Fullstack Web

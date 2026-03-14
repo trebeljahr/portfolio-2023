@@ -10,11 +10,18 @@ import { Logo } from '../logos/Logo'
 function AppHeader() {
   const [theme, toggleTheme] = useThemeSwitcher()
   const [onCVRoute, setOnCVRoute] = useState(false)
+  const [onCVForPrintingRoute, setOnCVForPrintingRoute] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
     setOnCVRoute(router.asPath === '/cv')
   }, [router])
+
+  useEffect(() => {
+    setOnCVForPrintingRoute(router.asPath === '/cv?print=true')
+  }, [router])
+
+  if (onCVForPrintingRoute) return null
 
   return (
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} id='nav' className='container mx-auto'>
