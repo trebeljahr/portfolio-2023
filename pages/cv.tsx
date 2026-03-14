@@ -53,10 +53,10 @@ export default function CVPage() {
           <p>
             Self hosted blog, newsletter, booknotes and{' '}
             <a href='https://ricos.site/r3f' className='hover-underline-animation'>
-              three.js experiments playground
-            </a>{' '}
-            , where I am writing newsletters and posts on AI, web development, traveling and experiment with real time
-            3D graphics in the browser.
+              three.js playground
+            </a>
+            , where I am writing newsletters and posts on AI, web development, traveling and often experiment with real
+            time 3D graphics in the browser.
             <p>
               Check it out at{' '}
               <a href='https://ricos.site' className='hover-underline-animation'>
