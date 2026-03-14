@@ -1,5 +1,7 @@
 import { FiGithub, FiTwitter, FiLinkedin, FiGlobe } from 'react-icons/fi'
 import AppFooterCopyright from './AppFooterCopyright'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 const socialLinks = [
   {
@@ -25,6 +27,14 @@ const socialLinks = [
 ]
 
 function AppFooter() {
+  const [onCVForPrintingRoute, setOnCVForPrintingRoute] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    setOnCVForPrintingRoute(router.asPath === '/cv?print=true')
+  }, [router])
+
+  if (onCVForPrintingRoute) return null
   return (
     <div className='container mx-auto'>
       <div className='pt-20 pb-8 mt-20 border-t-2 sm:pt-30 border-primary-light dark:border-secondary-dark'>

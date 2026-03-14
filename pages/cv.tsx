@@ -57,13 +57,12 @@ export default function CVPage() {
             </a>
             , where I am writing newsletters and posts on AI, web development, traveling and often experiment with real
             time 3D graphics in the browser.
-            <p>
-              Check it out at{' '}
-              <a href='https://ricos.site' className='hover-underline-animation'>
-                ricos.site
-              </a>
-              .
-            </p>
+            <br />
+            Check it out at{' '}
+            <a href='https://ricos.site' className='hover-underline-animation'>
+              ricos.site
+            </a>
+            .
           </p>
         </div>
 
