@@ -40,3 +40,6 @@ report.*.json
 
 # claude code
 .claude/
+# claude code
+.claude/settings.local.json
+.claude/worktrees/

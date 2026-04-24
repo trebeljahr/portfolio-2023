@@ -1,21 +1,21 @@
-import { ReactNode } from 'react';
-import AppHeader from '../shared/AppHeader';
-import AppFooter from '../shared/AppFooter';
-import PagesMetaHead from '../PagesMetaHead';
+import type { ReactNode } from "react";
+import PagesMetaHead from "../PagesMetaHead";
+import AppFooter from "../shared/AppFooter";
+import AppHeader from "../shared/AppHeader";
 
 type Props = {
-	children: ReactNode;
-}
+  children: ReactNode;
+};
 
 const DefaultLayout = ({ children }: Props) => {
-	return (
-		<>
-			<PagesMetaHead />
-			<AppHeader />
-			<div>{children}</div>
-			<AppFooter />
-		</>
-	);
+  return (
+    <>
+      <PagesMetaHead />
+      <AppHeader />
+      <div>{children}</div>
+      <AppFooter />
+    </>
+  );
 };
 
 export default DefaultLayout;
