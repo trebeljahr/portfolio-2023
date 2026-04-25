@@ -1,9 +1,12 @@
 {
   "name": "portfolio-page",
   "version": "1.0.0",
-  "authors": ["Rico Trebeljahr"],
+  "authors": [
+    "Rico Trebeljahr"
+  ],
   "license": "MIT",
   "private": true,
+  "packageManager": "pnpm@10.33.2",
   "engines": {
     "node": ">=18.18.0"
   },
@@ -27,10 +30,8 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.24.0",
     "eslint-config-next": "^15.0.0",
-    "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8.4.49",
-    "prettier": "^3.4.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.1",
     "typescript": "^5.7.0",
@@ -39,9 +40,8 @@
     "lint-staged": "^16.4.0"
   },
   "scripts": {
-    "lint": "npm run prettier && npm run eslint",
+    "lint": "npm run eslint && biome lint .",
     "eslint": "next lint --fix --dir src",
-    "prettier": "prettier --list-different \"./src/**/*.{ts,tsx,md}\"",
     "dev": "next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
@@ -52,6 +52,8 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,jsonc,css}": ["biome check --write --no-errors-on-unmatched"]
+    "*.{js,jsx,ts,tsx,json,jsonc,css}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   }
 }
