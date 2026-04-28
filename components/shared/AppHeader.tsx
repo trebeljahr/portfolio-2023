@@ -36,6 +36,7 @@ function AppHeader() {
           <div className="flex items-center gap-3">
             {onCVRoute && <DownloadCVButton />}
             <button
+              type="button"
               onClick={toggleTheme}
               aria-label="Theme Switcher"
               className="p-3 text-gray-400 cursor-pointer hover:text-indigo-500 dark:hover:text-indigo-400 bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm rounded-xl"

@@ -4,6 +4,7 @@ export const Logo = ({ dark = false, ...props }: SVGProps<SVGSVGElement> & { dar
   return (
     <div className="flex items-center justify-center space-x-1">
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         xmlSpace="preserve"

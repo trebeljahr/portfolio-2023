@@ -21,6 +21,7 @@ function ContactMeButton() {
       className="flex justify-center sm:block"
     >
       <button
+        type="button"
         onClick={scrollToContactForm}
         className="flex items-center justify-center mt-12 mb-6 text-lg text-gray-600 border border-indigo-200 rounded-lg shadow-lg font-general-medium w-36 sm:w-48 sm:mb-0 dark:border-ternary-dark py-2.5 sm:py-3 bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:ring-darkblue hover:border-darkblue hover:bg-darkblue hover:text-white duration-500"
       >

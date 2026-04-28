@@ -2,6 +2,7 @@ import type { SVGProps } from "react";
 
 export const SoftgamesLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     className="logo-img"

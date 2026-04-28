@@ -1,7 +1,7 @@
 import type { SVGProps } from "react";
 
 export const IronhackLogo = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 80 80" {...props}>
+  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 80 80" {...props}>
     <g fill="none" fillRule="evenodd">
       <path
         fill="#32c3ff"
