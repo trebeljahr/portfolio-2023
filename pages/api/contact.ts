@@ -2,7 +2,7 @@ import formData from "form-data";
 import Mailgun from "mailgun.js";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 const mailgun = new Mailgun(formData);
 
 const DOMAIN = "portfolio.trebeljahr.com";

@@ -70,7 +70,7 @@ export function ContactForm() {
 
         setFormState({ name: "", email: "", subject: "", message: "" });
         toast("🦄 Your message is on it's way", toastOptions);
-      } catch (error) {
+      } catch (_error) {
         toast.error("Oops, something broke there. Maybe, try again?", toastOptions);
         setEmailIsSending(false);
       }
