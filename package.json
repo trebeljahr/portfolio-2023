@@ -39,7 +39,7 @@
   },
   "scripts": {
     "lint": "biome lint .",
-    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "dev": "next dev --webpack --hostname localhost --port 3801",
     "build": "next build --webpack",
     "analyze": "ANALYZE=true next build --webpack",
     "start": "next start",
