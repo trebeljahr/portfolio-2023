@@ -8,40 +8,15 @@ const withPWA = require("@ducanh2912/next-pwa").default({
 });
 
 const nextConfig = {
-  experimental: {},
   i18n: {
     locales: ["en-US"],
     defaultLocale: "en-US",
     domains: [{ domain: "portfolio.trebeljahr.com", defaultLocale: "en-US" }],
   },
-  images: {},
   reactStrictMode: true,
 };
 
-const KEYS_TO_OMIT = [
-  "webpackDevMiddleware",
-  "configOrigin",
-  "target",
-  "analyticsId",
-  "webpack5",
-  "amp",
-  "assetPrefix",
-];
-
-module.exports = (_phase, { defaultConfig }) => {
-  const plugins = [[withPWA], [withBundleAnalyzer, {}]];
-
-  const wConfig = plugins.reduce((acc, [plugin, config]) => plugin({ ...acc, ...config }), {
-    ...defaultConfig,
-    ...nextConfig,
-  });
-
-  const finalConfig = {};
-  Object.keys(wConfig).forEach((key) => {
-    if (!KEYS_TO_OMIT.includes(key)) {
-      finalConfig[key] = wConfig[key];
-    }
-  });
-
-  return finalConfig;
-};
+module.exports = [withPWA, withBundleAnalyzer].reduce(
+  (config, plugin) => plugin(config),
+  nextConfig,
+);
