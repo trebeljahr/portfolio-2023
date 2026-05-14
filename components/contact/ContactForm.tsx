@@ -12,6 +12,10 @@ export function ContactForm() {
   });
 
   const [emailIsSending, setEmailIsSending] = useState(false);
+  const [hasTriedSending, setHasTriedSending] = useState(false);
+  const validationMessageClass = `hidden ${
+    hasTriedSending ? "peer-invalid:block" : ""
+  } text-red-700 font-light`;
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -29,6 +33,7 @@ export function ContactForm() {
 
     if (emailIsSending) return;
 
+    setHasTriedSending(true);
     setEmailIsSending(true);
 
     async function postData() {
@@ -69,6 +74,7 @@ export function ContactForm() {
         }
 
         setFormState({ name: "", email: "", subject: "", message: "" });
+        setHasTriedSending(false);
         toast("🦄 Your message is on it's way", toastOptions);
       } catch (_error) {
         toast.error("Oops, something broke there. Maybe, try again?", toastOptions);
@@ -110,9 +116,7 @@ export function ContactForm() {
             value={formState.name}
             onChange={updateFormState}
           >
-            <p className="hidden peer-invalid:block text-red-700 font-light">
-              Please enter a name.
-            </p>
+            <p className={validationMessageClass}>Please enter a name.</p>
           </FormInput>
           <FormInput
             inputLabel="Email"
@@ -125,9 +129,7 @@ export function ContactForm() {
             ariaLabelName="Email"
             onChange={updateFormState}
           >
-            <p className="hidden peer-invalid:block text-red-700 font-light">
-              Please enter a valid email.
-            </p>
+            <p className={validationMessageClass}>Please enter a valid email.</p>
           </FormInput>
           <FormInput
             inputLabel="Subject"
@@ -140,9 +142,7 @@ export function ContactForm() {
             ariaLabelName="Subject"
             onChange={updateFormState}
           >
-            <p className="hidden peer-invalid:block text-red-700 font-light">
-              Please enter a subject.
-            </p>
+            <p className={validationMessageClass}>Please enter a subject.</p>
           </FormInput>
 
           <div className="mt-6">
